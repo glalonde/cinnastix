@@ -94,15 +94,17 @@ uglyURLs = false
 # Author’s information
 [author]
     # Name
-    name = "glalonde"
+    name = "reuixiy"
     # Email
-    email = "lalondegeoffrey@gmail.com"
+    email = "reuixiy@gmail.com"
     # Motto or introduction
-    motto = "Reporting Live"
+    motto = "Viva La Vida"
     # Avatar
     avatar = "/icons/apple-touch-icon.png"
     # Personal website, default: baseURL
-    website = "https://glalon.de"
+    website = "https://io-oi.me/"
+    # Twitter
+    twitter = "reuixiy"
 
 # Related content
 [related]
@@ -819,6 +821,12 @@ uglyURLs = false
     displayReadingTime = true
     readingTimeIcon = "clock"
 
+    displayBusuanziPagePV = false
+    busuanziPagePVIcon = "eye"
+    # Note: render only in production
+    #       environment
+    #       Homepage is not supported yet
+    #       https://busuanzi.ibruce.info/
 
 
     ######################################
@@ -1260,6 +1268,17 @@ uglyURLs = false
 
     # Custom Footer (Markdown supported)
     customFooter = ""
+
+    displayBusuanziSiteUVAndPV = false
+    busuanziSiteUVText = "Site UV"
+    busuanziSiteUVIcon = "user"
+    busuanziSitePVText = "Site PV"
+    busuanziSitePVIcon = "eye"
+    # Note: render only in production
+    #       environment
+    #       Leave it empty("") if you
+    #       don’t need the text or icon
+    #       https://busuanzi.ibruce.info/
 
     # Socials
     enableSocials = true
