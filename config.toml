@@ -4,6 +4,8 @@ paginate = 5
 pygmentsStyle = "solarized-dark" # solarized-light, -dark or -dark256
 copyright = ""
 
+relativeURLs = true
+
 [params]
   scheme = "dark" # light, dark, gray or preference
   description = "Reporting Live"
