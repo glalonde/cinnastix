@@ -13,32 +13,27 @@
 		{{ $style := resources.Get (printf "css/colors-%s.scss" (.Site.Params.scheme | default "dark")) | toCSS | minify | fingerprint }}
 		<link rel="stylesheet" href="{{ $style.Permalink }}">
 
+
+		{{ if or .Params.math .Site.Params.math }}
+			{{ partial "math.html" . }}
+		{{ end }}
+
 		{{ partial "head.html" . }}
 	</head>
 	<body>
+		<div class="bg-port"></div>
 		<header id="header">
 			<h1><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
 			<p>{{ .Site.Params.Description }}</p>
+				{{ partial "navigation.html" . }}
 		</header>
 
 		<div id="page">
-			<div id="sidebar">
-				{{ partial "navigation.html" . }}
-			</div>
-
 			<div id="content">
 				{{ block "main" . }}{{ end }}
 			</div>
 
 			<footer id="footer">
-				<p class="copyright">
-					{{ if .Site.Copyright }}
-						{{ .Site.Copyright }}
-					{{ else }}
-						Powered by <a href="https://gohugo.io/">Hugo</a> and the
-						<a href="https://github.com/bake/solar-theme-hugo">Solar</a>-theme.
-					{{ end }}
-				</p>
 			</footer>
 		</div>
 

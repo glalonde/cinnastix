@@ -266,11 +266,8 @@ h3 {
 }
 
 #header {
-	width: 650px;
-	padding-left: 150px;
-	margin: 40px auto 50px auto;
-	background: url(/img/logo.svg) no-repeat center left;
-	background-size: auto 100%;
+	padding: 1vmin 4vmin;
+	font-size: 1.6rem;;
 }
 #header h1 {
 	font-size: 32px;
@@ -278,6 +275,14 @@ h3 {
 }
 #header h1 a {
 	border: none;
+}
+#header .nav {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 #blog-logo img {
@@ -316,40 +321,6 @@ h3 {
 	margin: 0 auto;
 }
 
-#sidebar {
-	position: absolute;
-	text-align: right;
-	width: 160px;
-	top: 0;
-	left: -240px;
-}
-
-#sidebar li {
-	list-style: none;
-	margin: 2px 0;
-}
-
-#sidebar a {
-	border: none;
-	display: block;
-	font-size: 1.2em;
-	padding: 0;
-}
-
-#sidebar a span {
-	padding: 2px 4px;
-}
-
-#sidebar .bio {
-	margin-top: 40px;
-	font-size: 0.8em;
-}
-
-#sidebar .bio img.avatar {
-	width: 95px;
-	height: 95px;
-	border-radius: 95px;
-}
 
 /*** Posts ***/
 article {
@@ -468,16 +439,13 @@ pre[class*='language-'] {
 		padding-right: 10px;
 	}
 
-	#header {
-		background-position: right 20px center;
-	}
 	#header h1,
 	#header p {
 		padding-left: 10px;
 		padding-right: 10px;
 	}
 
-	#sidebar {
+	#header {
 		position: relative;
 		text-align: left;
 		width: 100%;
@@ -485,24 +453,24 @@ pre[class*='language-'] {
 		margin: 10px 10px 20px 10px;
 	}
 
-	#sidebar nav ul {
+	#header nav ul {
 		padding-left: 0;
 	}
 
-	#sidebar nav ul li {
+	#header nav ul li {
 		display: inline;
 	}
 
-	#sidebar a {
+	#header a {
 		display: inline;
 	}
 
-	#sidebar nav select.mnav {
+	#header nav select.mnav {
 		display: block;
 		margin-bottom: 15px;
 	}
 
-	#sidebar .bio {
+	#header .bio {
 		display: none;
 	}
 }
@@ -610,4 +578,27 @@ pre[class*='language-'] {
 }
 .token.entity {
 	cursor: help;
+}
+
+/*
+* post feed
+*/
+.post-feed {
+    position: relative;
+    display: grid;
+    grid-gap: 4vmin;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 4vmin 0;
+}
+
+@media (max-width: 1000px) {
+    .post-feed {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 700px) {
+    .post-feed {
+        grid-template-columns: 1fr;
+        grid-gap: 40px;
+    }
 }
