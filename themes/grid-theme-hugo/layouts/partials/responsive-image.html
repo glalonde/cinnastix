@@ -1,0 +1,20 @@
+
+<!-- Need to provide page resources.-->
+{{if not (isset . "resource")}}
+{{ errorf "Specify resource=... in partial args." }}
+{{end}}
+
+{{ $small := (partial "image-resize" (dict "resource" .resource "options" "300x"))}}
+{{ $medium := (partial "image-resize" (dict "resource" .resource "options" "600x"))}}
+{{ $large := (partial "image-resize" (dict "resource" .resource "options" "1000x"))}}
+{{ $xlarge := (partial "image-resize" (dict "resource" .resource "options" "2000x"))}}
+
+<!-- https://www.freecodecamp.org/news/a-guide-to-responsive-images-with-ready-to-use-templates-c400bd65c433/-->
+<img class="post-card-image"
+    srcset="{{$small}} 300w,
+            {{$medium}} 600w,
+            {{$large}} 1000w,
+            {{$xlarge}} 2000w"
+    sizes="(min-width: 1400px) 1400px, 92vw"
+    src="{{$xlarge}}"
+/>
