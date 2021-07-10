@@ -190,38 +190,6 @@ h3 {
 }
 
 /*** Posts ***/
-article {
-	margin-bottom: 40px;
-}
-
-article h1 {
-	font-size: 17px;
-	margin: 0 0 10px 0;
-}
-article h1 a {
-	border: none;
-}
-article h1 a.anchor {
-	margin-left: 8px;
-}
-
-article p {
-	text-align: justify;
-}
-
-article img {
-	display: block;
-	text-align: center;
-	max-width: 100%;
-	height: auto;
-	margin: 0 auto 1em auto;
-}
-
-article .meta {
-	padding-top: 6px;
-	font-size: 0.85em;
-	font-style: italic;
-}
 
 img.left {
 	float: left;
@@ -409,6 +377,43 @@ pre[class*='language-'] {
 }
 .token.entity {
 	cursor: help;
+}
+
+/* Content grid */
+.content-grid {
+    display: grid;
+    grid-template-columns:
+        [full-start]
+        minmax(4vw, auto)
+            [wide-start]
+            minmax(auto, 160px)
+                [bg-start]
+                minmax(4vw, 80px)
+                    [main-start]
+                        Min(1040px, Calc(100% - 16%))
+                    [main-end]
+                minmax(4vw, 80px)
+                [bg-end]
+            minmax(auto, 160px)
+            [wide-end]
+        minmax(4vw, auto)
+        [full-end]
+    ;
+}
+
+.content-grid > * {
+    grid-column: main-start / main-end;
+}
+
+.content-div {
+    grid-column: full-start/full-end;
+    grid-row: 1/-1;
+}
+
+.bg-div {
+    grid-column: bg-start / bg-end;
+    grid-row: 1 / -1;
+    background-color: var(--background);
 }
 
 /* Post Feed */
