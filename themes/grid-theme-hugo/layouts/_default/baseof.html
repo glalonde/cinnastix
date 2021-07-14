@@ -26,10 +26,11 @@
 			{{ partial "header.html" . }}
 		</header>
 
-		<div id="page" class="inner">
-			{{ block "main" . }}{{ end }}
-
-			<footer id="footer"></footer>
+		<div class="outer">
+			<div id="page" class="inner">
+				{{ block "main" . }}{{ end }}
+				<footer id="footer"></footer>
+			</div>
 		</div>
 
 		{{ partial "foot.html" . }}
