@@ -37,9 +37,6 @@ a:active,
 a:visited {
 	text-decoration: none;
 }
-a:hover {
-	color: #000000;
-}
 
 p {
 	margin-bottom: 15px;
@@ -417,6 +414,12 @@ pre[class*='language-'] {
 }
 
 /* Post Feed */
+/* Full width page blocks */
+.outer {
+    position: relative;
+    padding: 0 4vmin;
+}
+
 .inner {
     margin: 0 auto;
     max-width: 1200px;
@@ -480,7 +483,9 @@ pre[class*='language-'] {
 
 .post-card-content-link {
     position: relative;
+    flex-grow: 1;
     display: block;
+    padding: 25px 25px 0;;
     color: var(--color-lightgrey);
 }
 
