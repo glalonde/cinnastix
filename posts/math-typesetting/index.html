@@ -3,7 +3,7 @@
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width">
 <title>Math Typesetting</title>
-<link rel=stylesheet href=../../css/colors-dark.min.9b934caa731824789251e99a11b9f7d032b0a266d1e69d4ce95f228713c5acc1.css>
+<link rel=stylesheet href=../../css/colors-dark.min.c2a9478068bbbc2e201c126bd2a61a3babd965d55a7c42d3d94c9d5c130a306d.css>
 <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css integrity=sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc crossorigin=anonymous>
 <script defer src=https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js integrity=sha384-YNHdsYkH6gMx9y3mRkmcJ2mFUjTd0qNQQvY9VYZgQd7DcN7env35GzlmFaZ23JGp crossorigin=anonymous></script>
 <script defer src=https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js integrity=sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl crossorigin=anonymous onload=renderMathInElement(document.body)></script>
@@ -25,15 +25,13 @@
 </header>
 <div class=outer>
 <div id=page class=inner>
-<article class=post>
-<div class=content-grid>
-<div class=bg-div></div>
+<article class="post-full post">
 <div class=content-div>
 <header class=post-header>
 <time class=post-date>08 March 2019</time>
 <h1 class=article-title>Math Typesetting</h1>
 </header>
-<div class="post-content content-grid"><p>Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.</p>
+<div class="post-content post-column"><p>Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.</p>
 <p>In this example we will be using <a href=https://katex.org/>KaTeX</a></p>
 <ul>
 <li>Create a partial under <code>/layouts/partials/math.html</code></li>
@@ -53,9 +51,6 @@
 $$
 \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
 $$</p></div>
-<footer class=content-grid>
-</footer>
-</div>
 </div>
 </article>
 <footer id=footer></footer>
