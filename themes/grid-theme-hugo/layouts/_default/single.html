@@ -1,17 +1,20 @@
 {{ define "main" }}
-	<article class="post">
-		<!-- Outer grid to align background -->
-		<div class="content-grid">
-			<div class="bg-div"></div>
-			<div class="content-div">
-				<header class="post-header">
-					<time class="post-date">{{ .Date.Format "02 January 2006" }}</time>
-					<h1 class="article-title">{{ .Title }}{{ if .Draft }}(Draft){{ end }}</h1>
-				</header>
-				<div class="post-content content-grid">{{ .Content | safeHTML }}</div>
-				<footer class="content-grid">
-				</footer>
+	<article class="post-full post">
+		<div class="content-div">
+			<header class="post-header">
+				<time class="post-date">{{ .Date.Format "02 January 2006" }}</time>
+				<h1 class="article-title">{{ .Title }}{{ if .Draft }}(Draft){{ end }}</h1>
+			</header>
+
+			<!-- Check for an image named featured.jpg etc, to put in the post card view. -->
+			{{$maybe_featured := .Resources.GetMatch "**featured*"}}
+			{{ if $maybe_featured }}
+			<div class="post-column">
+				{{ partial "responsive-image" (dict "resource" $maybe_featured "classes" "post-full-image")}}
 			</div>
+			{{end}}
+
+			<div class="post-content post-column">{{ .Content | safeHTML }}</div>
 		</div>
 	</article>
 {{ end }}
