@@ -1,12 +1,11 @@
 <nav class="header-inner header-grid">
-    <div>
-        <h1><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
-    </div>
     <div class="header-menu">
+
+        <a class="home" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
         {{ range .Site.Menus }}
             <ul class="nav">
                 {{ range . }}
-                    <li><a {{ if eq .Name "Mastodon" }}rel="me" {{ end }}href="{{ .URL }}"><span>{{ .Name }}</span></a></li>
+                    <li><a href="{{ .URL }}"><span>{{ .Name }}</span></a></li>
                 {{ end }}
             </ul>
         {{ end }}

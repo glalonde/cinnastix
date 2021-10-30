@@ -1,4 +1,4 @@
-title = "Grid Theme"
+title = "Cinnastix"
 theme = "grid-theme-hugo"
 paginate = 5
 pygmentsStyle = "solarized-dark" # solarized-light, -dark or -dark256
@@ -9,6 +9,7 @@ relativeURLs = true
 [params]
   scheme = "dark" # light, dark, gray or preference
   description = "Reporting Live"
+  logo = "mvq.jpg"
 
 [menu]
   [[menu.main]]
@@ -16,4 +17,4 @@ relativeURLs = true
     url = "/index.xml"
   [[menu.main]]
     name = "About"
-    url = "https://github.com/glalonde/"
+    url = "/about"
