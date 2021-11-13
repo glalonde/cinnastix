@@ -1,8 +1,8 @@
-## Cinnastix
+## Cinnastyx
 
 Dark grid theme for lightweight pages.
 
-Try out demo at [glalonde.github.io/cinnastix](https://glalonde.github.io/cinnastix).
+Try out demo at [glalonde.github.io/cinnastyx](https://glalonde.github.io/cinnastyx).
 
 Try out locally:
 

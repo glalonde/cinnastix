@@ -1,5 +1,5 @@
-title = "Cinnastix"
-theme = "cinnastix"
+title = "Cinnastyx"
+theme = "cinnastyx"
 # This is only to get exampleSite to work from within the theme directory, remove it if you're using a standard site layout.
 themesdir = "../.."
 paginate = 5
