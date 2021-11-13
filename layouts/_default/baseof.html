@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		{{ with .OutputFormats.Get "RSS" }}
+			<link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+			<link href="{{ .RelPermalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
+		{{ end }}
+
+		<title>{{ .Title }}</title>
+
+		{{ $style := resources.Get  "css/colors-dark.scss"  | toCSS | minify | fingerprint }}
+		<link rel="stylesheet" href="{{ $style.Permalink }}">
+
+
+		{{ if or .Params.math .Site.Params.math }}
+			{{ partial "math.html" . }}
+		{{ end }}
+
+		{{ partial "head.html" . }}
+	</head>
+	<body>
+		<div class="bg-port"></div>
+		<header class="header">
+			{{ partial "header.html" . }}
+		</header>
+
+		<div class="outer">
+			<div id="page" class="inner">
+				{{ block "main" . }}{{ end }}
+				<footer id="footer"></footer>
+			</div>
+		</div>
+
+		{{ partial "foot.html" . }}
+	</body>
+</html>

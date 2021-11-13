@@ -1,0 +1,22 @@
+
+{{if not (.Get "src")}}
+{{ errorf "Specify src=... in shortcode" }}
+{{end}}
+
+{{if not (.Get "options")}}
+{{ errorf "Specify options=\"1234\" in shortcode" }}
+{{end}}
+
+{{ $options := .Get "options" }}
+
+{{ $image_name := (.Get "src")}}
+
+{{ $original := .Page.Resources.GetMatch (printf "**%s*" $image_name) }}
+{{ if not $original }}
+{{ errorf (printf "Image not found: %s" $image_name) }}
+{{ end }}
+
+{{ .Scratch.Set "image" ($original.Resize $options) }}
+
+{{ $image := .Scratch.Get "image" }}
+{{ $image.RelPermalink }}

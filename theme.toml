@@ -1,0 +1,10 @@
+name = "cinnastix"
+description = "A light or dark grid theme"
+homepage = "https://github.com/glalonde"
+tags = ["blog", "light", "dark", "responsive"]
+features = []
+min_version = "0.1"
+
+[author]
+	name = "glalonde"
+	homepage = "https://glalon.de"

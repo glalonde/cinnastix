@@ -1,0 +1,10 @@
+{{ define "main" }}
+    <div class="post-grid">
+
+	{{ range $index, $element := .Paginator.Pages }}
+		{{ partial "post-card.html" (dict "Post" . "Index" $index) }}
+	{{ end }}
+
+	</div>
+	{{ partial "pagination.html" . }}
+{{ end }}
