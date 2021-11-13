@@ -1,8 +1,0 @@
-{{- if not (isset . "resource") -}}
-{{- errorf "Specify resource=... in partial args." -}}
-{{- end -}}
-{{- if not (isset . "options") -}}
-{{- errorf "Specify options=\"1234\" in partial args." -}}
-{{- end -}}
-{{- $image := (.resource.Resize .options) -}}
-{{- $image.RelPermalink -}}
