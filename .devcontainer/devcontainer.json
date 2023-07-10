@@ -1,8 +1,9 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "image": "mcr.microsoft.com/devcontainers/base",
   "features": {
-    "ghcr.io/devcontainers/features/hugo:1": {
-      "extended": true
-    }
+      "ghcr.io/devcontainers/features/hugo": {
+          "version": "latest",
+          "extended": true
+      }
   }
 }

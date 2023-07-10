@@ -19,3 +19,8 @@ But generally, init the theme as a git submodule in the `themes/` directory.
 ```bash
 $ git submodule add https://github.com/glalonde/cinnastyx.git themes/cinnastyx
 ```
+
+## Usage in codespaces
+```bash
+hugo server --baseURL=https://glalonde-cautious-space-parakeet-vrvvpqw4q9354x-1313.preview.app.github.dev --appendPort=false
+```
